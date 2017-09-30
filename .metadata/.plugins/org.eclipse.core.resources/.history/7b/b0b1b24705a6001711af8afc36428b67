@@ -1,0 +1,14 @@
+
+public class ComplexNumber {
+
+	public int real;
+	public int imaginary;
+	
+	
+	public ComplexNumber(){
+		this(0,0);
+	}
+	
+	
+	
+}
