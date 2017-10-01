@@ -1,0 +1,76 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class RationalTest {
+	
+	@Test
+	public void zeroDenominator(){
+		
+	}
+	
+	@Test 
+	public void testNormalize(){
+		assertEquals(new Rational(2,4), new Rational(1,2));
+	}
+	
+	@Test
+	public void testNegativeDenominator(){
+		assertEquals(new Rational(-1,2), new Rational(1, -2));
+	}
+	
+	@Test 
+	public void testAdd(){
+		Rational r = new Rational(1,2);
+		r.add(new Rational(1,2));
+		assertEquals(r, new Rational(1));
+	}
+	
+	@Test 
+	public void testAddZero(){
+		Rational r = new Rational(1,2);
+		r.add(new Rational(0));
+		assertEquals(r, r);
+	}
+	
+	@Test 
+	public void testAddNegative(){
+		Rational r = new Rational(3, 2);
+		r.add(new Rational(-1 , 2));
+		assertEquals(r, new Rational(1));
+	}
+		
+	@Test
+	public void testAddWholeNumber(){
+		Rational r = new Rational(1,2);
+		r.add(new Rational(1));
+		assertEquals(r, new Rational(3,2));
+	}
+	
+	@Test
+	public void testSubtract(){
+		Rational r = new Rational(3 , 2);
+		r.subtract(new Rational(1 , 2));
+		assertEquals(r, new Rational(1));
+	}
+	
+	@Test
+	public void testSubtractZero(){
+		Rational r = new Rational(1,2);
+		r.subtract(new Rational(0));
+		assertEquals(r, r);
+	}
+	
+	@Test
+	public void testSubtractFromZero(){
+		Rational r = new Rational(0);
+		r.subtract(new Rational(1,2));
+		assertEquals(r, new Rational(-1, 2));
+	}
+	
+	@Test
+	public void testSubtractWholeNumber(){
+		
+		
+	}
+	
+}

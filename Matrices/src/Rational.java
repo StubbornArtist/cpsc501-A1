@@ -133,6 +133,10 @@ public class Rational {
 			System.out.println("Error: Object is null");
 			System.exit(0);
 		}
+		if(r2.equals(new Rational(0))){
+			System.out.println("Error: Denominator cannnot be zero");
+			System.exit(0);
+		}
 		return new Rational(r1.getNumerator() * r2.getDenominator(),
 				r1.getDenominator() * r2.getNumerator());
 
@@ -367,6 +371,7 @@ public class Rational {
 	 * 
 	 * @return String representation of rational number
 	 */
+	@Override
 	public String toString() {
 		return numerator + "/" + denominator;
 	}
@@ -379,13 +384,15 @@ public class Rational {
 	 *            another rational object
 	 * @return boolean
 	 */
-	public boolean equals(Rational other) {
-		if (other == null) {
+	@Override
+	public boolean equals(Object other) {
+		if (other == null)
 			return false;
-		}
-
-		return denominator == other.getDenominator()
-				&& numerator == other.getNumerator();
+		if(!(other instanceof Rational)) 
+			return false;
+		
+		return denominator == ((Rational)other).getDenominator()
+				&& numerator ==((Rational)other).getNumerator();
 	}
 }
 

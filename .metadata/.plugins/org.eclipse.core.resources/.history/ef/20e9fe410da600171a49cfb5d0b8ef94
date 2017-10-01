@@ -1,0 +1,10 @@
+
+import org.junit.*;
+public class RationalTest {
+
+	@Test
+	public void testAdd(){		
+		assertEqual("Hi", "Hi");
+	}
+	
+}

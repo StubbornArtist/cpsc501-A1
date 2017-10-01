@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="RationalTest" project="MatriceTests" tests="28" started="7" failures="0" errors="0" ignored="0">
+  <testsuite name="RationalTest" incomplete="true">
+    <testcase name="testMultiplyByDenominator" classname="RationalTest" time="0.0"/>
+    <testcase name="testSubtractWholeNumber" classname="RationalTest" time="0.0"/>
+    <testcase name="testAddZero" classname="RationalTest" time="0.0"/>
+    <testcase name="testDivideByZero" classname="RationalTest" time="0.0"/>
+    <testcase name="testAdd" classname="RationalTest" time="0.0"/>
+    <testcase name="testSubtract" classname="RationalTest" time="0.0"/>
+    <testcase name="testReciprocateZero" classname="RationalTest" incomplete="true"/>
+    <testcase name="testNegativeDenominator" classname="RationalTest" incomplete="true"/>
+    <testcase name="testMuliplyNegative" classname="RationalTest" incomplete="true"/>
+    <testcase name="testNegateNegative" classname="RationalTest" incomplete="true"/>
+    <testcase name="testAddNegative" classname="RationalTest" incomplete="true"/>
+    <testcase name="testAddWholeNumber" classname="RationalTest" incomplete="true"/>
+    <testcase name="testDivideNegativeByNegative" classname="RationalTest" incomplete="true"/>
+    <testcase name="testSubtractFromZero" classname="RationalTest" incomplete="true"/>
+    <testcase name="testNegateZero" classname="RationalTest" incomplete="true"/>
+    <testcase name="testDividePositiveByNegative" classname="RationalTest" incomplete="true"/>
+    <testcase name="testDivideByWholeNumber" classname="RationalTest" incomplete="true"/>
+    <testcase name="testMultiplyByWholeNumber" classname="RationalTest" incomplete="true"/>
+    <testcase name="testNormalize" classname="RationalTest" incomplete="true"/>
+    <testcase name="testDivide" classname="RationalTest" incomplete="true"/>
+    <testcase name="testMultiplyZero" classname="RationalTest" incomplete="true"/>
+    <testcase name="testMultiply" classname="RationalTest" incomplete="true"/>
+    <testcase name="testDivideZero" classname="RationalTest" incomplete="true"/>
+    <testcase name="testNegateWholeNumber" classname="RationalTest" incomplete="true"/>
+    <testcase name="testNegate" classname="RationalTest" incomplete="true"/>
+    <testcase name="testReciprocate" classname="RationalTest" incomplete="true"/>
+    <testcase name="zeroDenominator" classname="RationalTest" incomplete="true"/>
+    <testcase name="testSubtractZero" classname="RationalTest" incomplete="true"/>
+  </testsuite>
+</testrun>

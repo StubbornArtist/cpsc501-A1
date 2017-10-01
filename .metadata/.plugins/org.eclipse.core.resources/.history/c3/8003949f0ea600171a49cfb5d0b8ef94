@@ -1,0 +1,18 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
+import org.junit.BeforeClass;
+
+public class RationalTest {
+	
+	@Test
+	public void testAdd(){		
+		assertEquals("Hi", "Hi");
+	}
+	
+	@Test
+	public void testNormalize(){
+		assertEquals(new Rational(2, 4), new Rational(1, 2));
+		
+	}
+	
+}

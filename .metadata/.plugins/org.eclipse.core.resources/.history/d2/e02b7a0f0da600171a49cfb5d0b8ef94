@@ -1,0 +1,11 @@
+
+public class RationalTest {
+
+	@Test
+	public void testAdd(){
+		
+		
+		
+	}
+	
+}

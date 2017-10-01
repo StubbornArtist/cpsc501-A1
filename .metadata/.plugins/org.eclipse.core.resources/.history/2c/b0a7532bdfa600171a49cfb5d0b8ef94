@@ -1,0 +1,22 @@
+import static org.junit.Assert.*;
+import org.junit.Test;
+
+public class RationalTest {
+		
+	@Test
+	public void testNormalize(){
+		assertEquals(new Rational(2, 4), new Rational(1, 2));
+	}
+	
+	@Test
+	public void zeroDenominator(){
+	}
+	
+	@Test 
+	public void testAdd(){
+		assertEquals(new Rational(1,2).add(new Rational(1, 2)))
+		
+		
+	}
+	
+}

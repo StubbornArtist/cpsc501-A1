@@ -1,0 +1,12 @@
+
+import junit.*;
+public class RationalTest {
+
+	@Test
+	public void testAdd(){
+		
+		
+		
+	}
+	
+}
