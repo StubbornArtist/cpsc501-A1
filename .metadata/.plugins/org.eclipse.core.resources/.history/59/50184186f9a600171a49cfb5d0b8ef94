@@ -1,0 +1,18 @@
+
+public class SystemExitSecurityManager extends SecurityManager {
+	
+	public static final class SystemExitSecurityException extends SecurityException{
+		private final int statusCode;
+		
+		public SystemExitSecurityException(final int status){
+			statusCode = status;
+		}
+		
+		public int getStatusCode(){
+			return statusCode;
+		}
+	}
+	
+	
+
+}

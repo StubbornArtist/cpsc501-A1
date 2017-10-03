@@ -1,12 +1,18 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
-import org.junit.Rule;
+import org.junit.BeforeClass;
 
 public class RationalTest {
 
-	@Test
+	
+	@BeforeClass
+	public static void setUp(){	
+		System.setSecurityManager(new SystemExitSecurityManager());
+	}
+	
+	@Test(expected = SystemExitSecurityException.class)
 	public void zeroDenominator(){
-		//new Rational(2,0);
+		new Rational(2,0);
 	}
 	
 	@Test 
@@ -116,10 +122,10 @@ public class RationalTest {
 		assertEquals(r, new Rational(3,2));
 	}
 	
-	@Test
+	@Test(expected = SystemExitSecurityException.class)
 	public void testDivideByZero(){
 		Rational r = new Rational(1,2);
-		//r.divide(new Rational(0));
+		r.divide(new Rational(0));
 	}
 	
 	@Test
@@ -185,10 +191,10 @@ public class RationalTest {
 		assertEquals(r, new Rational(2,3));
 	}
 	
-	@Test
+	@Test(expected = SystemExitSecurityException.class)
 	public void testReciprocateZero(){
 		Rational r = new Rational(0);
-		//r.reciprocate();
+		r.reciprocate();
 	}
 	
 	@Test
@@ -219,10 +225,10 @@ public class RationalTest {
 		assertEquals(r.getDenominator(), 3);
 	}
 	
-	@Test
+	@Test(expected = SystemExitSecurityException.class)
 	public void testSetDenominatorToZero(){
 		Rational r = new Rational(1,2);
-		//r.setDenominator(0);
+		r.setDenominator(0);
 	}
 	
 	@Test

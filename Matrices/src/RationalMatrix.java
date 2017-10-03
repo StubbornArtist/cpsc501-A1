@@ -365,7 +365,8 @@ public class RationalMatrix {
 	 * @return boolean if both matrices have the same values at the same
 	 *         positions the n it returns true
 	 */
-	public boolean equals(RationalMatrix other) {
+	@Override
+	public boolean equals(Object other) {
 		boolean same = true;
 		// checks it the dimensions of this matrix are the same as the given
 		// matrix
@@ -373,8 +374,11 @@ public class RationalMatrix {
 		if(other==null){
 			return false;
 		}
-		if (other.rowLength() != this.rowLength()
-				|| other.colLength() != this.colLength()) {
+		if(!(other instanceof RationalMatrix)) 
+			return false;
+		
+		if (((RationalMatrix) other).rowLength() != this.rowLength()
+				|| ((RationalMatrix)other).colLength() != this.colLength()) {
 			same = false;
 		} else {
 			// checks every element at position (h,i) in this matrix and
@@ -382,7 +386,7 @@ public class RationalMatrix {
 			// element in the given matrix at (h,i)
 			for (int h = 0; h < matrix.length; h++) {
 				for (int i = 0; i < matrix[h].length; i++) {
-					if (!this.getAt(h, i).equals(other.getAt(h, i))) {
+					if (!this.getAt(h, i).equals(((RationalMatrix)other).getAt(h, i))) {
 						same = false;
 					}
 				}
@@ -397,6 +401,7 @@ public class RationalMatrix {
 	 * 
 	 * @return temp (String)
 	 */
+	@Override
 	public String toString() {
 		String temp = "";
 		// runs through each row

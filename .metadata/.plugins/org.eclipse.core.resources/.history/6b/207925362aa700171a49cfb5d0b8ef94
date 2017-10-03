@@ -1,0 +1,27 @@
+import java.security.Permission;
+
+
+public class SystemExitSecurityManager extends SecurityManager {
+	
+	@Override
+	public void checkExit(final int statusCode){
+		throw new SystemExitSecurityException(statusCode);
+		
+	}
+	
+	@Override
+	public void checkPermission(final Permission permission){}
+
+}
+
+public static final class SystemExitSecurityException extends SecurityException{
+	private final int statusCode;
+	
+	public SystemExitSecurityException(final int statusCode){
+		this.statusCode = statusCode;
+	}
+	
+	public int getStatusCode(){
+		return statusCode;
+	}
+}
